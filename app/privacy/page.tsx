@@ -327,11 +327,19 @@ function PolicyContent({ text }: { text: string }) {
             const items = paragraph.split('\n').filter(item => item.trim());
             return (
                 <ul key={idx} className="list-disc list-inside space-y-2 text-gray-700 ml-4 mb-6">
-                {items.map((item, itemIdx) => (
+                {items.map((item, itemIdx) => {
+                    const itemText = item.replace(/^• /, '');
+                    const itemParts = itemText.split(/(\*\*.*?\*\*)/g);
+                    return (
                     <li key={itemIdx} className="leading-relaxed">
-                    {item.replace(/^• /, '')}
+                        {itemParts.map((part, partIdx) => 
+                           part.startsWith('**') && part.endsWith('**') ? 
+                           <strong key={partIdx} className="font-semibold text-gray-900">{part.slice(2, -2)}</strong> : 
+                           part
+                        )}
                     </li>
-                ))}
+                    );
+                })}
                 </ul>
             );
             }

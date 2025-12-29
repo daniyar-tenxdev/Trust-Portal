@@ -40,18 +40,6 @@ export default function ContactPage() {
                     </p>
                  </div>
             </div>
-
-            <div className="mt-16 bg-gray-50 p-8 rounded-xl border border-gray-100">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Reporting a Security Vulnerability?</h3>
-                <p className="text-gray-600 mb-4">
-                    If you believe you have discovered a security vulnerability in LongevityPRO, please let us know immediately.
-                </p>
-                <div className="flex gap-4">
-                    <a href="mailto:security@longevitypro.ai" className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary/90 shadow-sm">
-                        Contact Security Team
-                    </a>
-                </div>
-            </div>
         </div>
       </main>
     </div>

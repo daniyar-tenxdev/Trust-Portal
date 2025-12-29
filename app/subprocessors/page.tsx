@@ -42,7 +42,7 @@ export default function SubprocessorsPage() {
             </div>
             
             <p className="mt-8 text-sm text-gray-500">
-                To receive updates on changes to our subprocessors, please contact <a href="mailto:privacy@longevitypro.ai" className="text-primary hover:underline">privacy@longevitypro.ai</a>.
+                To receive updates on changes to our subprocessors, please contact <a href="mailto:support@longevitypro.ai" className="text-primary hover:underline">support@longevitypro.ai</a>.
             </p>
         </div>
       </main>
