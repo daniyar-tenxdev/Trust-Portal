@@ -34,14 +34,14 @@ jobs:
 
       - name: Build and Push Frontend
         run: |-
-          DOCKER_TAG="${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/paaros/trust-portal"
+          DOCKER_TAG="${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/longevity/trust-portal"
           docker build --tag "${DOCKER_TAG}" .
           docker push "${DOCKER_TAG}"
 
       - name: Deploy Frontend to Cloud Run
         run: |-
           gcloud run deploy trust-portal \
-            --image="${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/paaros/trust-portal" \
+            --image="${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/longevity/trust-portal" \
             --platform=managed \
             --region=${{ env.REGION }} \
             --allow-unauthenticated
